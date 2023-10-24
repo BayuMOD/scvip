@@ -160,7 +160,7 @@ fram=$( free -m | awk 'NR==2 {print $4}' )
 nginx=$( systemctl status nginx | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 #################
 r="\033[1;31m"  #REDTERANG
-a=" ${CYAN}TERIMAKASIH SUDAH MENGGUNAKAN SCRIPT BY KOREKE"
+a=" ${CYAN}TERIMAKASIH SUDAH MENGGUNAKAN SCRIPT BY BAYU & DANS"
 ################
 # // Clear
 clear
