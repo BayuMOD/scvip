@@ -5,6 +5,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 BG="\E[44;1;39m"
 NC="\E[0m"
 CYAN='\033[0;96m'
+clear
 echo -e "$BG[INFO]$NC $CYAN Proses Update File$NC"
 sleep 1
 
@@ -61,6 +62,7 @@ wget -q -O /usr/bin/bw "https://raw.githubusercontent.com/BayuMOD/scvip/main/men
 wget -q -O /usr/bin/genssl "https://raw.githubusercontent.com/BayuMOD/scvip/main/ssh/genssl.sh"
 wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/BayuMOD/scvip/main/backup/menu-backup.sh"
 cd
-echo -e "Back To menu 2 Sec"
-sleep 2
+echo -e "$BG[INFO]$NC $CYAN Proses Update Selesai$NC"
+echo -e "Kembali ke menu dalam 5 Detik"
+sleep 5
 menu
