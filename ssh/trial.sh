@@ -16,6 +16,7 @@ portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 
 clear
+domain=$(cat /etc/xray/domain)
 IP=$(curl -sS ifconfig.me);
 ossl=`cat /root/log-install.txt | grep -w "OpenVPN" | cut -f2 -d: | awk '{print $6}'`
 opensh=`cat /root/log-install.txt | grep -w "OpenSSH" | cut -f2 -d: | awk '{print $1}'`
@@ -51,7 +52,7 @@ echo -e "Username     : $Login"
 echo -e "Password     : $Pass"
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
 echo -e "IP           : $IP"
-echo -e "Host         : $domen"
+echo -e "Host         : ${domain}"
 echo -e "OpenSSH      : $opensh"
 echo -e "SSH-WS       : $portsshws"
 echo -e "SSH-SSL-WS   : $wsssl"
@@ -82,7 +83,7 @@ echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033
 echo -e "Username     : $Login"
 echo -e "Password     : $Pass"
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
-echo -e "Host         : $domen"
+echo -e "Host         : ${domain}"
 echo -e "OpenSSH      : $opensh"
 echo -e "SSH-WS       : $portsshws"
 echo -e "SSH-SSL-WS   : $wsssl"
