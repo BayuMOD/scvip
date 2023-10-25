@@ -28,7 +28,7 @@ ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
 sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
-
+domain=$(cat /etc/xray/domain)
 OhpSSH=`cat /root/log-install.txt | grep -w "OHP SSH" | cut -d: -f2 | awk '{print $1}'`
 OhpDB=`cat /root/log-install.txt | grep -w "OHP DBear" | cut -d: -f2 | awk '{print $1}'`
 OhpOVPN=`cat /root/log-install.txt | grep -w "OHP OpenVPN" | cut -d: -f2 | awk '{print $1}'`
@@ -50,7 +50,7 @@ echo -e "Username    : $Login" | tee -a /etc/log-create-user.log
 echo -e "Password    : $Pass" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/log-create-user.log
 echo -e "IP          : $IP" | tee -a /etc/log-create-user.log
-echo -e "Host        : $domen" | tee -a /etc/log-create-user.log
+echo -e "Host        : ${domain}" | tee -a /etc/log-create-user.log
 #echo -e "Host Dns    : $sldomain" | tee -a /etc/log-create-user.log
 #echo -e "Pubkey      : $slkey" | tee -a /etc/log-create-user.log
 echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-user.log
@@ -91,7 +91,7 @@ echo -e "Username    : $Login" | tee -a /etc/log-create-user.log
 echo -e "Password    : $Pass" | tee -a /etc/log-create-user.log
 echo -e "Max Login   : $iplimit" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Host        : $domen" | tee -a /etc/log-create-user.log
+echo -e "Host        : ${domain}" | tee -a /etc/log-create-user.log
 #echo -e "Host Dns   : $sldomain" | tee -a /etc/log-create-user.log
 #echo -e "Pubkey      : $slkey" | tee -a /etc/log-create-user.log
 echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-user.log
@@ -100,9 +100,9 @@ echo -e "SSH-SSL-WS  : $wsssl" | tee -a /etc/log-create-user.log
 echo -e "SSL/TLS     :$ssl" | tee -a /etc/log-create-user.log
 echo -e "Port Udp    : 1-65535" | tee -a /etc/log-create-user.log
 echo -e "UDPGW       : 7100-7300" | tee -a /etc/log-create-user.log
-echo -e "SSH-80      : $domen:80@$Login:$Pass" | tee -a /etc/log-create-user.log
-echo -e "SSH-443     : $domen:443@$Login:$Pass" | tee -a /etc/log-create-user.log
-echo -e "SSH-UDP     : $domen:1-65535@$Login:$Pass" | tee -a /etc/log-create-user.log
+echo -e "SSH-80      : ${domain}:80@$Login:$Pass" | tee -a /etc/log-create-user.log
+echo -e "SSH-443     : ${domain}:443@$Login:$Pass" | tee -a /etc/log-create-user.log
+echo -e "SSH-UDP     : ${domain}:1-65535@$Login:$Pass" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Expired On  : $exp" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/log-create-user.log
