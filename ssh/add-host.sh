@@ -21,5 +21,5 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo "Dont forget to renew cert"
 echo ""
 read -n 1 -s -r -p "PRESS [ ENTER ] KELUAR MENU"
-genssl
+certv2ray
 fi
