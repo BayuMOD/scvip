@@ -207,7 +207,7 @@ echo -e " \E[41;1;39m            >>> Install BR <<<           \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 5 
 clear 
-wget https://raw.githubusercontent.com/BayuMOD/v4/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/BayuMOD/vvip/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 clear
 # // Download Data
 echo -e "${GREEN}Download Data${NC}"
