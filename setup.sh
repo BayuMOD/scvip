@@ -390,8 +390,8 @@ echo ""
 echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH		: 22"  | tee -a log-install.txt
-echo "   - SSH Websocket	: 80" | tee -a log-install.txt
-echo "   - SSH SSL Websocket	: 443" | tee -a log-install.txt
+echo "   - SSH Websocket NTLS   : 80, 8880, 8080, 2082, 2086" | tee -a log-install.txt
+echo "   - SSH Websocket TLS    : 443" | tee -a log-install.txt
 echo "   - Stunnel4		: 447, 777" | tee -a log-install.txt
 echo "   - Dropbear		: 109, 143" | tee -a log-install.txt
 echo "   - Badvpn		: 7100-7900" | tee -a log-install.txt
@@ -401,10 +401,9 @@ echo "   - Vmess None TLS	: 80, 8880, 8080, 2082, 2086" | tee -a log-install.txt
 echo "   - Vless TLS		: 443" | tee -a log-install.txt
 echo "   - Vless None TLS	: 80" | tee -a log-install.txt
 echo "   - Trojan GRPC		: 443" | tee -a log-install.txt
-echo "   - Trojan WS		: 443" | tee -a log-install.txt
-echo "   - Trojan WS None TLS   : 80, 8880, 8080, 2082, 2086" | tee -a log-install.txt
+echo "   - Trojan WS TLS        : 443" | tee -a log-install.txt
+echo "   - Trojan WS NTLS       : 80, 8880, 8080, 2082, 2086" | tee -a log-install.txt
 echo "   - Trojan Go		: 443" | tee -a log-install.txt
-echo "   - slowdns              : 443,80,8080,53,5300" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone		: Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
