@@ -58,8 +58,8 @@ echo -e "========================="
 echo -e "Link TrGo  		 : ${link}" | tee -a /etc/log-create-user.log
 echo -e "Link TrGo (v2rayNG) : ${link1}" | tee -a /etc/log-create-user.log
 echo -e "========================="
-echo -e "Script Mod By Yogz Vpn"
+echo -e "Script Mod By Bayu Vpn"
 echo "" | tee -a /etc/log-create-user.log
-read -n 1 -s -r -p "PRESS [ ENTER ] KELUAR MENU"
+read -n 1 -s -r -p "SCRIPT BY BAYU & DANS"
 
 menu
