@@ -76,7 +76,7 @@ else
 clear
 ssh-menu
 fi
-read -n 1 -s -r -p "PRESS [ ENTER ] KELUAR MENU"
+read -n 1 -s -r -p "SCRIPT BY BAYU & DANS"
 
 ssh-menu
 
