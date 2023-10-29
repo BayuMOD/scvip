@@ -114,5 +114,5 @@ echo -e "GET / HTTP/1.1[crlf]Host: ${domain}[crlf]Upgrade: websocket[crlf][crlf]
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/log-create-user.log
 fi
 echo "" | tee -a /etc/log-create-user.log
-read -n 1 -s -r -p "PRESS [ ENTER ] KELUAR MENU"
+read -n 1 -s -r -p "SCRIPT BY BAYU & DANS"
 menu
