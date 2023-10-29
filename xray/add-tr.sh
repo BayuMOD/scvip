@@ -76,6 +76,6 @@ echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033
 echo -e "Expired On   : $exp"
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
 echo ""
-read -n 1 -s -r -p "PRESS [ ENTER ] KELUAR MENU"
+read -n 1 -s -r -p "SCRIPT BY BAYU & DANS"
 
 menu
