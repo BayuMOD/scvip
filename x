@@ -1,61 +1,49 @@
 #!/bin/bash
 clear
-figlet 'Fix Trojan' | lolcat
-echo ""
-echo -e "Fix Trojan By FV STORE ..." | lolcat
-sleep 2
-wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/BayuMOD/scvip/main/xray/add-tr.sh"
-wget -q -O /usr/bin/trialtrojan "https://raw.githubusercontent.com/BayuMOD/scvip/main/xray/trialtrojan.sh"
-
-sleep 0.1
-rm -rf /root/log-install.txt
-echo " "
-echo "=====================-[ BAYU & DANS TUNNEL ]-===================="
-echo ""
-echo "------------------------------------------------------------"
-echo ""
-echo ""
-echo "   >>> Service & Port"  | tee -a log-install.txt
-echo "   - OpenSSH		: 22"  | tee -a log-install.txt
-echo "   - SSH Websocket NTLS   : 80, 8880, 8080, 2082, 2086" | tee -a log-install.txt
-echo "   - SSH Websocket TLS    : 443" | tee -a log-install.txt
-echo "   - Stunnel4		: 447, 777" | tee -a log-install.txt
-echo "   - Dropbear		: 109, 143" | tee -a log-install.txt
-echo "   - Badvpn		: 7100-7900" | tee -a log-install.txt
-echo "   - Nginx		: 81" | tee -a log-install.txt
-echo "   - Vmess TLS		: 443" | tee -a log-install.txt
-echo "   - Vmess None TLS	: 80, 8880, 8080, 2082, 2086" | tee -a log-install.txt
-echo "   - Vless TLS		: 443" | tee -a log-install.txt
-echo "   - Vless None TLS	: 80" | tee -a log-install.txt
-echo "   - Trojan GRPC		: 443" | tee -a log-install.txt
-echo "   - Trojan WS TLS        : 443" | tee -a log-install.txt
-echo "   - Trojan WS NTLS       : 80, 8880, 8080, 2082, 2086" | tee -a log-install.txt
-echo "   - Trojan Go		: 443" | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone		: Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
-echo "   - Fail2Ban		: [ON]"  | tee -a log-install.txt
-echo "   - Dflate		: [ON]"  | tee -a log-install.txt
-echo "   - IPtables		: [ON]"  | tee -a log-install.txt
-echo "   - Auto-Reboot		: [ON]"  | tee -a log-install.txt
-echo "   - IPv6			: [OFF]"  | tee -a log-install.txt
-echo "   - Autoreboot On	: $aureb:00 $gg GMT +7" | tee -a log-install.txt
-echo "   - AutoKill Multi Login User" | tee -a log-install.txt
-echo "   - Auto Delete Expired Account" | tee -a log-install.txt
-echo "   - Fully automatic script" | tee -a log-install.txt
-echo "   - VPS settings" | tee -a log-install.txt
-echo "   - Admin Control" | tee -a log-install.txt
-echo "   - Change port" | tee -a log-install.txt
-echo "   - Full Orders For Various Services" | tee -a log-install.txt
-echo ""
-echo ""
-echo "------------------------------------------------------------"
-echo ""
-echo "===============-[ Script Created By BAYU & DANS TUNNEL ]-==============="
-echo -e ""
-echo ""
-echo "" | tee -a log-install.txt
+fun_bar() {
+    CMD[0]="$1"
+    CMD[1]="$2"
+    (
+        [[ -e $HOME/fim ]] && rm $HOME/fim
+        ${CMD[0]} -y >/dev/null 2>&1
+        ${CMD[1]} -y >/dev/null 2>&1
+        touch $HOME/fim
+    ) >/dev/null 2>&1 &
+    tput civis
+    echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
+    while true; do
+        for ((i = 0; i < 18; i++)); do
+            echo -ne "\033[0;32m="
+            sleep 0.1s
+        done
+        [[ -e $HOME/fim ]] && rm $HOME/fim && break
+        echo -e "\033[0;33m]"
+        sleep 1s
+        tput cuu1
+        tput dl1
+        echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
+    done
+    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
+    tput cnorm
+}
+res1() {
+wget -q -O /usr/bin/trial "https://raw.githubusercontent.com/BayuMOD/scvip/main/ssh/trial.sh"
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/BayuMOD/scvip/main/ssh/usernew.sh"
+chmod +x *
+cd
+rm -rf x
+}
+netfilter-persistent
 clear
+figlet 'Fv stores' | lolcat
+echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e " \e[1;97;101m             FIX SSH SCRIPT             \e[0m"
+echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
-read -p "Fix Trojan Selesai, Klik Enter Untuk Ke menu"
+echo -e "  \033[1;91m Fix ssh script service\033[1;37m"
+fun_bar 'res1'
+echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e ""
+history -c
+read -n 1 -s -r -p "Press [ Enter ] to back on menu"
 menu
