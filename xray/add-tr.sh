@@ -54,28 +54,40 @@ sed -i '/#trojanws$/a\#! '"$user $exp"'\
 },{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#trojangrpc$/a\#! '"$user $exp"'\
 },{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
-
-systemctl restart xray
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
+tgl2=$(date +"%d")
+bln2=$(date +"%b")
+thn2=$(date +"%Y")
+tnggl="$tgl2 $bln2, $thn2"
 trojanlink1="trojan://${uuid}@${domain}:443?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=bug.com#${user}"
 trojanlink="trojan://${uuid}@${domain}:443?path=%2Ftrojan-ws&security=tls&host=${domain}&type=ws&sni=${domain}#${user}"
+trojanlink2="trojan://${uuid}@${domain}:80?path=%2Ftrojan-ws&security=none&host=${domain}&type=ws#${user}"
+systemctl restart xray
 clear
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
 echo -e "\\E[0;41;36m  Trojan Account \E[0m"
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
 echo -e "Remarks      : ${user}"
 echo -e "Host/IP      : ${domain}"
-echo -e "Port ALL     : 80, 443"
+echo -e "Port Grpc    : 443"
+echo -e "Port WS TLS  : 443"
+echo -e "Port WS NTLS : 80, 8080, 8880, 2082"
 echo -e "Key          : ${uuid}"
 echo -e "Path         : /trojan-ws"
 echo -e "ServiceName  : trojan-grpc"
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
-echo -e "Link WS      : ${trojanlink}"
+echo -e "Link WS TLS  : ${trojanlink}"
+echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
+echo -e "Link WS NTLS : ${trojanlink2}"
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
 echo -e "Link GRPC    : ${trojanlink1}"
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
-echo -e "Expired On   : $exp"
+echo -e "Dibuat Pada   : $tnggl"
+echo -e "Berakhir Pada : $expe"
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
-echo ""
 read -n 1 -s -r -p "SCRIPT BY BAYU & DANS"
 
 menu
