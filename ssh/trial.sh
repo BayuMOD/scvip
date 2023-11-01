@@ -33,8 +33,11 @@ echo -e "SSH-80       : ${domain}:80@$Login:$Pass"
 echo -e "SSH-443      : ${domain}:443@$Login:$Pass"
 echo -e "SSH-UDP      : ${domain}:1-65535@$Login:$Pass"
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
-echo -e "Paylod Websocket :"
-echo -e "GET wss//[host]/ HTTP/1.1[crlf]Host: [host][crlf]Upgrade: websocket[crlf][crlf]"
+echo -e "Payload Websocket NTLS :" | tee -a /etc/log-create-user.log
+echo -e "GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]" | tee -a /etc/log-create-user.log
+echo -e "" | tee -a /etc/log-create-user.log
+echo -e "Payload Websocket TLS  :" | tee -a /etc/log-create-user.log
+echo -e "GET https://[host]/ HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
 echo ""
 read -n 1 -s -r -p "SCRIPT BY BAYU & DANS"
