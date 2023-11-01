@@ -64,7 +64,7 @@ echo -e "\\E[0;41;36m  Trojan Account \E[0m"
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
 echo -e "Remarks      : ${user}"
 echo -e "Host/IP      : ${domain}"
-echo -e "Port ALL     : ${tr}
+echo -e "Port ALL     : 80, 443"
 echo -e "Key          : ${uuid}"
 echo -e "Path         : /trojan-ws"
 echo -e "ServiceName  : trojan-grpc"
