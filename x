@@ -27,8 +27,9 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-wget -q -O /usr/bin/trial "https://raw.githubusercontent.com/BayuMOD/scvip/main/ssh/trial.sh"
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/BayuMOD/scvip/main/ssh/usernew.sh"
+cd /usr/bin
+wget -q -O trial "https://raw.githubusercontent.com/BayuMOD/scvip/main/ssh/trial.sh"
+wget -q -O usernew "https://raw.githubusercontent.com/BayuMOD/scvip/main/ssh/usernew.sh"
 chmod +x *
 cd
 rm -rf x
