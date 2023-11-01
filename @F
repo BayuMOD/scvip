@@ -37,7 +37,7 @@ rm -rf x
 }
 netfilter-persistent
 clear
-figlet 'Fv stores' | lolcat
+figlet 'Bayu Store' | lolcat
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " \e[1;97;101m              FIX ERROR SCRIPT           \e[0m"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
