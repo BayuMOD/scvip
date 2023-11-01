@@ -76,7 +76,8 @@ else
 clear
 ssh-menu
 fi
-read -n 1 -s -r -p "SCRIPT BY BAYU & DANS"
+read -n 1 -s -r -p "SCRIPT BY BAYU & DANS [ ENTER ]"
+"\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 
 ssh-menu
 
