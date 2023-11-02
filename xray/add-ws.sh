@@ -63,7 +63,7 @@ acs=`cat<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "bugmu.com",
+      "add": "${domain}",
       "port": "443",
       "id": "${uuid}",
       "aid": "0",
@@ -100,7 +100,7 @@ grpc=`cat<<EOF
       "net": "grpc",
       "path": "vmess-grpc",
       "type": "none",
-      "host": "bugmu.com",
+      "host": "${domain}",
       "tls": "tls"
 }
 EOF`
