@@ -16,7 +16,7 @@ exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 clear
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
-echo -e "\E[0;41;36m      TRIAL SSH       \E[0m"
+echo -e "\E[0;41;36m     🇮🇩 TRIAL SSH 🇮🇩     \E[0m"
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
 echo -e "Username     : $Login"
 echo -e "Password     : $Pass"
