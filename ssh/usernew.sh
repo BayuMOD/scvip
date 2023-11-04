@@ -59,7 +59,7 @@ echo > /dev/null
 fi
 clear
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\E[0;41;36m   SSH OVPN Account  \E[0m" | tee -a /etc/log-create-user.log
+echo -e "\E[0;41;36m  🇮🇩 SSH OVPN Account 🇮🇩  \E[0m" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Username     : $Login" | tee -a /etc/log-create-user.log
 echo -e "Password     : $Pass" | tee -a /etc/log-create-user.log
