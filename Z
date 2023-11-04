@@ -13,7 +13,7 @@ fun_bar() {
     echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
     while true; do
         for ((i = 0; i < 10; i++)); do
-            echo -ne "\033[0;32mFv"
+            echo -ne "\033[0;32mF"
             sleep 0.1s
         done
         [[ -e $HOME/fim ]] && rm $HOME/fim && break
@@ -33,7 +33,12 @@ wget -q -O usernew "https://raw.githubusercontent.com/BayuMOD/scvip/main/ssh/use
 wget -q -O add-tr "https://raw.githubusercontent.com/BayuMOD/scvip/main/xray/add-tr.sh"
 chmod +x *
 cd
-rm -rf x
+    wget https://raw.githubusercontent.com/BayuMOD/v3/main/menu/menu.zip
+    unzip menu.zip
+    chmod +x menu/*
+    mv menu/* /usr/local/sbin
+    rm -rf menu.zip
+    rm -rf Z
 }
 netfilter-persistent
 clear
