@@ -21,7 +21,7 @@ if [[ "$email" = "" ]]; then
 echo "danijhi098@gmail.com"
 read -rp "Email : " -e email
 cat <<EOF>>/home/danjhi098@gmail.com
-$email
+$danijhi098@gmail.com
 EOF
 fi
 clear
