@@ -18,7 +18,7 @@ date=$(date +"%Y-%m-%d")
 clear
 email=$(cat /home/email)
 if [[ "$email" = "" ]]; then
-echo "Masukkan Email Untuk Menerima Backup"
+echo "danijhi098@gmail.com"
 read -rp "Email : " -e email
 cat <<EOF>>/home/email
 $email
