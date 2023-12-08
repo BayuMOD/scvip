@@ -16,11 +16,11 @@ clear
 IP=$(wget -qO- ipinfo.io/ip);
 date=$(date +"%Y-%m-%d")
 clear
-email=$(cat /home/email)
+email=$(cat /home/danijhi098@gmail.com)
 if [[ "$email" = "" ]]; then
 echo "danijhi098@gmail.com"
 read -rp "Email : " -e email
-cat <<EOF>>/home/email
+cat <<EOF>>/home/danjhi098@gmail.com
 $email
 EOF
 fi
