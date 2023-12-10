@@ -16,12 +16,12 @@ clear
 IP=$(wget -qO- ipinfo.io/ip);
 date=$(date +"%Y-%m-%d")
 clear
-email=$(cat /home/danijhi098@gmail.com)
+email=$(cat /home/email)
 if [[ "$email" = "" ]]; then
-echo "danijhi098@gmail.com"
+echo "MASUKAN EMAIL BUAT BACKUP"
 read -rp "Email : " -e email
-cat <<EOF>>/home/danjhi098@gmail.com
-$danijhi098@gmail.com
+cat <<EOF>>/home/email
+$email
 EOF
 fi
 clear
@@ -48,7 +48,7 @@ IP VPS        : $IP
 Link Backup   : $link
 Tanggal       : $date
 ==================================
-" | mail -s "Backup Data" $danijhi098@gmail.com
+" | mail -s "Backup Data" $email
 rm -rf /root/backup
 rm -r /root/$IP-$date.zip
 clear
